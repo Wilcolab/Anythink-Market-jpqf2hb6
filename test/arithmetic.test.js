@@ -1,4 +1,5 @@
 describe('Arithmetic', function () {
+    //welcome to the test suite
     describe('Validation', function () {
         it('rejects missing operation', function (done) {
             request.get('/arithmetic?operand1=21&operand2=21')
