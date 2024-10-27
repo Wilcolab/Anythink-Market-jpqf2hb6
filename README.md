@@ -35,7 +35,7 @@ To run the Express server using Docker, follow these steps:
 
   This command will build the Docker image for the Express server and start the containers defined in the `docker-compose.yml` file.
 
-- The Express server should now be running. You can access it at port `8000`.
+- The Express server should now be running. You can access it at port `8001`.
 
 ## API Routes
 
