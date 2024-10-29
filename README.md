@@ -16,6 +16,3 @@ A special thanks to the following awesome Hubbers who have contributed in many d
 [pierluigi](https://github.com/pierluigi), [parroty](https://github.com/yuichielectric), [yuichielectric](https://github.com/yuichielectric), [dchomh](https://github.com/dchomh), [nolecram](https://github.com/nolecram), [rsymo](https://github.com/rsymo), [damovisa](https://github.com/damovisa) and anyone else I've inadvertently missed.
 
 _v1.0 Released June, 2023_
-
-
-Welcome to the Wilco 
