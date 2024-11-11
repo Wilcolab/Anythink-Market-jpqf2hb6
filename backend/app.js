@@ -1,4 +1,5 @@
 require("dotenv").config();
+
 var http = require("http"),
   path = require("path"),
   methods = require("methods"),
@@ -27,7 +28,7 @@ app.use(express.static(__dirname + "/public"));
 
 app.use(
   session({
-    secret: "e6F9KvSDf4dyXj",
+    secret: process.env.SESSION_SECRET,
     cookie: { maxAge: 60000 },
     resave: false,
     saveUninitialized: false
