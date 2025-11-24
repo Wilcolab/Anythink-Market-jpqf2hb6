@@ -1,0 +1,19 @@
+  id: ai-response
+  uses: actions/ai-inference@v2
+  with:
+    token: {% raw %}${{ secrets.GITHUB_TOKEN }}{% endraw %}
+    max-tokens: 1000
+    system-prompt: |
+      You are a GitHub issue assistant. Analyze issues for completeness.
+      Provide helpful suggestions and identify missing information.
+    prompt: |
+      Issue by {% raw %}${{ github.event.issue.user.login }}{% endraw %}
+      Title: {% raw %}${{ github.event.issue.title }}{% endraw %}
+      Body: {% raw %}${{ github.event.issue.body }}{% endraw %}
+
+- name: Comment results on the issue
+  uses: peter-evans/create-or-update-comment@v4
+  with:
+    token: {% raw %}${{ secrets.GITHUB_TOKEN }}{% endraw %}
+    issue-number: {% raw %}${{ github.event.issue.number }}{% endraw %}
+    body: {% raw %}${{ steps.ai-response.outputs.response }}{% endraw %}
