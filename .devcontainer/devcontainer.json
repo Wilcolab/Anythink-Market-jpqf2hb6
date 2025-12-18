@@ -1,20 +1,16 @@
 {
-  "name": "Python playground",
-  "image": "mcr.microsoft.com/devcontainers/python:0-3.11-bullseye",
+  "name": "Node.js",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:0-18",
   "customizations": {
-    "codespaces": {
-      "openFiles": []
-    },
     "vscode": {
-      "settings": {
-        "extensions.ignoreRecommendations": true,
-        "workbench.startupEditor": "none",
-        "workbench.welcomePage.walkthroughs.openOnInstall": false,
-        "workbench.welcomePage.experimental.videoTutorials": "off",
-        "github.codespaces.defaultExtensions": []
-      },
-      "extensions": ["ms-toolsai.jupyter@2025.8.0", "ms-python.python"]
+      "extensions": [
+        "GitHub.copilot",
+        "GitHub.copilot-labs"
+      ]
     }
   },
-  "postStartCommand": "bash -c .devcontainer/setup.sh"
+  "forwardPorts": [
+    3000
+  ],
+  "postCreateCommand": "npm install"
 }
